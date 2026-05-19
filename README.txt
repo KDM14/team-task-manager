@@ -1,36 +1,113 @@
-Team Task Manager
+====================================================================
+                       TEAM TASK MANAGER
+====================================================================
 
-Live Application URL: [To be filled by the user after deployment]
-GitHub Repository Link: [To be filled by the user after deployment]
-Demo Video: [To be filled by the user]
 
-## Features
-- Authentication (Signup/Login) with Role-Based Access Control (Admin/Member)
-- Project & team management
-- Task creation, assignment & status tracking
-- Dashboard with task overview (my tasks, overdue tasks)
+Author: Dhanush
 
-## Technology Stack
-- Frontend: React (Vite), React Router, Vanilla CSS
-- Backend: Node.js, Express
-- Database: SQLite (via Prisma ORM)
-- Authentication: JWT
 
-## Role Capabilities
-- Admin: Can create/edit/delete projects, manage team members, assign tasks, and change any task status.
-- Member: Can view projects, view assigned tasks, and update the status of their assigned tasks.
 
-## Local Setup
-1. Clone the repository
-2. Run `npm install` in the root directory
-3. To start local development:
-   - Terminal 1: `cd backend && npx prisma migrate dev && npm run dev`
-   - Terminal 2: `cd frontend && npm run dev`
+PROJECT OVERVIEW
+--------------------------------------------------------------------
+Team Task Manager is a full-stack web application designed to help teams 
+organize their workflow. It allows users to create projects, assign tasks, 
+and track progress efficiently. The application features strict Role-Based 
+Access Control (RBAC) to distinguish between Admin and Member permissions, 
+ensuring a secure and structured environment for team collaboration.
 
-## Deployment on Railway
-1. Create a new project on Railway.
-2. Link your GitHub repository.
-3. Add a persistent volume to your Railway service. Mount the volume at `/app/backend`. 
-   (This ensures the SQLite database is persisted across deployments).
-4. Railway will automatically detect the root package.json and run the build/start scripts.
-5. Set a `JWT_SECRET` environment variable in Railway (e.g. to a strong random string).
+CORE FEATURES
+--------------------------------------------------------------------
+1. Secure Authentication & Authorization:
+   - User Signup and Login via JWT (JSON Web Tokens).
+   - Password encryption using bcryptjs.
+
+2. Role-Based Access Control (RBAC):
+   - Admin: Has full access. Can create, edit, and delete projects, 
+     assign tasks to any member, and change any task status.
+   - Member: Has restricted access. Can only view projects they are 
+     part of and update the status of tasks specifically assigned to them.
+
+3. Project Management:
+   - Create comprehensive projects with titles and descriptions.
+   - View project details and track the number of associated tasks.
+
+4. Task Management & Tracking:
+   - Create detailed tasks within specific projects.
+   - Assign due dates and assign tasks to specific team members.
+   - Dynamic Dashboard highlighting total tasks, tasks assigned to 
+     the current user, and tasks that are overdue.
+   - Status tracking: TODO -> IN_PROGRESS -> REVIEW -> DONE.
+
+5. Modern & Premium UI/UX:
+   - Fully responsive and visually striking frontend built with React.
+   - Custom CSS featuring glassmorphism, dynamic gradients, and 
+     smooth micro-animations.
+
+TECHNOLOGY STACK
+--------------------------------------------------------------------
+Frontend:
+- React (via Vite)
+- React Router (for SPA navigation)
+- Vanilla CSS (for custom, premium styling without generic libraries)
+- Axios (for API communication)
+- Lucide React (for modern iconography)
+
+Backend:
+- Node.js & Express.js (REST API architecture)
+- Prisma ORM (for robust database modeling and migrations)
+- SQLite (for reliable local & volume-backed cloud storage)
+- JSON Web Token (JWT) & bcryptjs (for authentication/security)
+
+--------------------------------------------------------------------
+🗄️ DATABASE SCHEMA
+--------------------------------------------------------------------
+The application utilizes a relational database structure consisting 
+of three primary models:
+
+1. User
+   - id (UUID), name, email, password, role (ADMIN/MEMBER)
+   - One-to-Many relationship with Tasks
+
+2. Project
+   - id (UUID), name, description, createdAt
+   - One-to-Many relationship with Tasks
+
+3. Task
+   - id (UUID), title, description, status, dueDate
+   - Foreign Keys: projectId, assignedToId
+
+--------------------------------------------------------------------
+💻 LOCAL SETUP & INSTALLATION
+--------------------------------------------------------------------
+Prerequisites: Node.js (v18+) installed on your machine.
+
+1. Extract the project folder and open a terminal inside it.
+2. Install all dependencies across both frontend and backend:
+   npm run postinstall
+
+3. Start the application locally:
+   - Terminal 1 (Backend): 
+     cd backend
+     npx prisma migrate dev --name init
+     npm run dev
+   
+   - Terminal 2 (Frontend): 
+     cd frontend
+     npm run dev
+
+4. Open http://localhost:5173 in your web browser.
+
+DEPLOYMENT (RAILWAY)
+--------------------------------------------------------------------
+This application is fully optimized for monorepo deployment on Railway:
+1. Connect the GitHub repository to Railway.
+2. Railway automatically detects the root package.json and executes 
+   the build ("npm run build") and start ("npm run start") scripts.
+3. Express is configured to serve the built React frontend files statically, 
+   allowing both frontend and backend to operate securely on a single service.
+4. A persistent volume is mounted at `/app/backend` to ensure the SQLite 
+   database is preserved across redeployments.
+
+====================================================================
+End of README
+====================================================================
