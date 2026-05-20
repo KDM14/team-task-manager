@@ -92,7 +92,7 @@ Prerequisites: Node.js (v18+) installed on your machine.
      npm run dev
 
 4. Open http://localhost:5173 in your web browser.
-#<img width="510" height="400" alt="Screenshot 2026-05-20 at 11 36 37 PM" src="https://github.com/user-attachments/assets/77bb1115-8aeb-499e-b345-6169d27e3a2d" />
+#<img width="1710" height="1036" alt="Screenshot 2026-05-20 at 11 36 37 PM" src="https://github.com/user-attachments/assets/77bb1115-8aeb-499e-b345-6169d27e3a2d" />
 # DEPLOYMENT (RAILWAY)
 
 This application is fully optimized for monorepo deployment on Railway:
