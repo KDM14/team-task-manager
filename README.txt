@@ -2,18 +2,12 @@
                        TEAM TASK MANAGER
 ====================================================================
 
-Assignment Submission
+
 Author: Dhanush
 
---------------------------------------------------------------------
-🔗 IMPORTANT LINKS
---------------------------------------------------------------------
-Live Application URL : [INSERT YOUR RAILWAY URL HERE]
-GitHub Repository    : [INSERT YOUR GITHUB URL HERE]
-Demo Video (2-5 min) : [INSERT YOUR VIDEO URL HERE]
 
---------------------------------------------------------------------
-🚀 PROJECT OVERVIEW
+
+PROJECT OVERVIEW
 --------------------------------------------------------------------
 Team Task Manager is a full-stack web application designed to help teams 
 organize their workflow. It allows users to create projects, assign tasks, 
@@ -21,8 +15,7 @@ and track progress efficiently. The application features strict Role-Based
 Access Control (RBAC) to distinguish between Admin and Member permissions, 
 ensuring a secure and structured environment for team collaboration.
 
---------------------------------------------------------------------
-✨ CORE FEATURES
+CORE FEATURES
 --------------------------------------------------------------------
 1. Secure Authentication & Authorization:
    - User Signup and Login via JWT (JSON Web Tokens).
@@ -50,8 +43,7 @@ ensuring a secure and structured environment for team collaboration.
    - Custom CSS featuring glassmorphism, dynamic gradients, and 
      smooth micro-animations.
 
---------------------------------------------------------------------
-⚙️ TECHNOLOGY STACK
+TECHNOLOGY STACK
 --------------------------------------------------------------------
 Frontend:
 - React (via Vite)
@@ -105,8 +97,7 @@ Prerequisites: Node.js (v18+) installed on your machine.
 
 4. Open http://localhost:5173 in your web browser.
 
---------------------------------------------------------------------
-🌐 DEPLOYMENT (RAILWAY)
+DEPLOYMENT (RAILWAY)
 --------------------------------------------------------------------
 This application is fully optimized for monorepo deployment on Railway:
 1. Connect the GitHub repository to Railway.
