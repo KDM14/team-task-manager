@@ -1,11 +1,11 @@
 ####                       TEAM TASK MANAGER
 
 
-#Author: Dhanush
+# Author: Dhanush
 
 
 
-###PROJECT OVERVIEW
+### PROJECT OVERVIEW
 
 Team Task Manager is a full-stack web application designed to help teams 
 organize their workflow. It allows users to create projects, assign tasks, 
@@ -13,7 +13,7 @@ and track progress efficiently. The application features strict Role-Based
 Access Control (RBAC) to distinguish between Admin and Member permissions, 
 ensuring a secure and structured environment for team collaboration.
 
-###CORE FEATURES
+### CORE FEATURES
 
 1. Secure Authentication & Authorization:
    - User Signup and Login via JWT (JSON Web Tokens).
