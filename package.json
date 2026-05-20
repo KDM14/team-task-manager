@@ -4,6 +4,6 @@
   "scripts": {
     "postinstall": "cd frontend && npm install && cd ../backend && npm install && npx prisma generate",
     "build": "cd frontend && npm run build",
-    "start": "cd backend && npx prisma migrate deploy && node index.js"
+    "start": "cd backend && node index.js"
   }
 }
