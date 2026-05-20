@@ -1,22 +1,20 @@
-====================================================================
-                       TEAM TASK MANAGER
-====================================================================
+####                       TEAM TASK MANAGER
 
 
-Author: Dhanush
+# Author: Dhanush
 
 
 
-PROJECT OVERVIEW
---------------------------------------------------------------------
+### PROJECT OVERVIEW
+
 Team Task Manager is a full-stack web application designed to help teams 
 organize their workflow. It allows users to create projects, assign tasks, 
 and track progress efficiently. The application features strict Role-Based 
 Access Control (RBAC) to distinguish between Admin and Member permissions, 
 ensuring a secure and structured environment for team collaboration.
 
-CORE FEATURES
---------------------------------------------------------------------
+### CORE FEATURES
+
 1. Secure Authentication & Authorization:
    - User Signup and Login via JWT (JSON Web Tokens).
    - Password encryption using bcryptjs.
@@ -43,8 +41,8 @@ CORE FEATURES
    - Custom CSS featuring glassmorphism, dynamic gradients, and 
      smooth micro-animations.
 
-TECHNOLOGY STACK
---------------------------------------------------------------------
+### TECHNOLOGY STACK
+
 Frontend:
 - React (via Vite)
 - React Router (for SPA navigation)
@@ -58,9 +56,8 @@ Backend:
 - SQLite (for reliable local & volume-backed cloud storage)
 - JSON Web Token (JWT) & bcryptjs (for authentication/security)
 
---------------------------------------------------------------------
-🗄️ DATABASE SCHEMA
---------------------------------------------------------------------
+### DATABASE SCHEMA
+
 The application utilizes a relational database structure consisting 
 of three primary models:
 
@@ -76,9 +73,8 @@ of three primary models:
    - id (UUID), title, description, status, dueDate
    - Foreign Keys: projectId, assignedToId
 
---------------------------------------------------------------------
-💻 LOCAL SETUP & INSTALLATION
---------------------------------------------------------------------
+### LOCAL SETUP & INSTALLATION
+
 Prerequisites: Node.js (v18+) installed on your machine.
 
 1. Extract the project folder and open a terminal inside it.
@@ -96,9 +92,8 @@ Prerequisites: Node.js (v18+) installed on your machine.
      npm run dev
 
 4. Open http://localhost:5173 in your web browser.
+### DEPLOYMENT (RAILWAY)
 
-DEPLOYMENT (RAILWAY)
---------------------------------------------------------------------
 This application is fully optimized for monorepo deployment on Railway:
 1. Connect the GitHub repository to Railway.
 2. Railway automatically detects the root package.json and executes 
@@ -107,7 +102,3 @@ This application is fully optimized for monorepo deployment on Railway:
    allowing both frontend and backend to operate securely on a single service.
 4. A persistent volume is mounted at `/app/backend` to ensure the SQLite 
    database is preserved across redeployments.
-
-====================================================================
-End of README
-====================================================================
